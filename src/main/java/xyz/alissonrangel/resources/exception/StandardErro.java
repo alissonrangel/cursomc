@@ -2,7 +2,7 @@ package xyz.alissonrangel.resources.exception;
 
 import java.io.Serializable;
 
-public class StandartErro implements Serializable{
+public class StandardErro implements Serializable{
 	
 	
 	
@@ -16,7 +16,7 @@ public class StandartErro implements Serializable{
 	private String msg;
 	private Long timeStamp;
 	
-	public StandartErro(Integer status, String msg, Long timeStamp) {
+	public StandardErro(Integer status, String msg, Long timeStamp) {
 		super();
 		this.status = status;
 		this.msg = msg;
