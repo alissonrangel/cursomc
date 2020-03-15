@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 public class Cidade implements Serializable{
 
@@ -23,6 +25,7 @@ public class Cidade implements Serializable{
 	private Integer id;
 	private String nome;
 	
+	@JsonManagedReference //do lado que vc quer que venha os objetos associados - isso para não haver referencia ciclica
 	@ManyToOne
 	@JoinColumn(name = "estado_id")
 	private Estado estado;
