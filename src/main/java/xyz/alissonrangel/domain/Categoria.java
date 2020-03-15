@@ -29,7 +29,7 @@ public class Categoria implements Serializable{
 	private Integer id;
 	private String nome;
 	
-	@JsonManagedReference
+	@JsonManagedReference //do lado que vc quer que venha os objetos associados - isso para não haver referencia ciclica
 	@ManyToMany(mappedBy = "categorias")	
 	private List<Produto> produtos = new ArrayList<>(); 
 	

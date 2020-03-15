@@ -30,7 +30,7 @@ public class Produto implements Serializable{
 	private Double preco;
 	
 	
-	@JsonBackReference
+	@JsonBackReference //vai omitir a lista de categoria para cada produto - isso para não haver referencia ciclica
 	@ManyToMany
 	@JoinTable(name = "PRODUTO_CATEGORIA",
 			joinColumns = @JoinColumn(name = "produto_id"),
